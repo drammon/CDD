@@ -8,4 +8,4 @@ while cont < qtAlunos:
 
 media = total/qtAlunos
 print(media)
-#comentário
+
