@@ -21,3 +21,5 @@ if totalMin < 10:
     print(f"{totalHr}:0{totalMin}")
 else:
     print(f"{totalHr}:{totalMin}")
+
+print("final")
