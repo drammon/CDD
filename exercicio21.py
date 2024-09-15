@@ -1,6 +1,7 @@
 senha = "c_d_d:4.0"
 
-tentativas = 3
+tentativas = 5
+
 while tentativas != 0:
     tentativa = input("Digite a sua senha : ")
     if tentativa == senha:
@@ -8,11 +9,12 @@ while tentativas != 0:
         break
     elif tentativa == "":
         print("Você precisa digitar algo.")
-    elif tentativas == 0:
-        print("Senha incorreta. A conta será bloqueada.")
     else:
         tentativas -= 1
-        print(f"Senha incorreta. Tente novamente, você tem mais {tentativas} tentativas: ")
+        if tentativas > 0:
+            print(f"Senha incorreta. Tente novamente, você tem mais {tentativas} tentativas: ")
+        else:
+            print("Senha incorreta. Acabaram suas chances.")
 
 
 if tentativas == 0:
