@@ -1,13 +1,13 @@
-senha = "c_d_d:4.0"
+pin = "c_d_d:4.0"
 
-tentativas = 5
+tentativas = 3
 
 while tentativas != 0:
-    tentativa = input("Digite a sua senha : ")
-    if tentativa == senha:
+    senha = input("Digite a sua senha : ")
+    if senha == pin:
         print("Log-in realizado com sucesso!")
         break
-    elif tentativa == "":
+    elif senha == "":
         print("Você precisa digitar algo.")
     else:
         tentativas -= 1
