@@ -1,4 +1,6 @@
+#Receba os resultados de dois times e diga quem ganhou
 time1 = input("Digite o nome do time 1: ")
+
 placar1 = int(input(f"Digite o placar do {time1}: "))
 
 time2 = input("Digite o nome do time 2")

@@ -1,3 +1,4 @@
+#Receba nome, duas notas e exiba a média do estudante.
 nome = input("Digite seu nome: ")
 
 nota1 = float(input("Digite a primeira nota: "))

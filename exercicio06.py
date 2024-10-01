@@ -1,3 +1,5 @@
+#Receba três notas e exiba se o aluno foi aprovado, reprovado ou está em recuperação
+
 nota1 = float(input("Digite a primeira nota: "))
 nota2 = float(input("Digite a segunda nota: "))
 nota3 = float(input("Digite a terceira nota: "))

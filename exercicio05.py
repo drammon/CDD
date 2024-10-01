@@ -1,3 +1,4 @@
+#Receba dois números e imprima em ordem crescente.
 num1 = int(input("Digite o primeiro número: "))
 num2 = int(input("Digite o segundo número: "))
 
