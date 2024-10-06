@@ -16,7 +16,18 @@ while opcao != "5":
     match opcao:
         case "1":
             for i in range(tamanho):
-                nomes[i] = input(f"Cadastre o nome do {i + 1}º usuário: ")
+                usuario_existe = True
+
+                while usuario_existe == True:
+                    nomes_tentativa = input(f"Cadastre o nome do {i + 1}º usuário: ")
+
+                    if nomes_tentativa not in nomes:
+
+                        nomes[i] = nomes_tentativa
+                        usuario_existe = False
+                    else:
+                        print("Esse nome de usuário já está cadastrado.")
+
                 senhas[i] = input(f"Cadastre a senha do {i + 1}º usuário: ")
                 cpf[i] = input(f"Informe o CPF do {i + 1}º usuário (apenas números): ")
 
