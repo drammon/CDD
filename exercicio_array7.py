@@ -88,5 +88,6 @@ while opcao != 5:
                                 bloqueados[x] = ""
                                 restaura = True
 
+
         case 5:
             break
