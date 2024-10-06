@@ -86,8 +86,10 @@ while opcao != 5:
                         for x in range(len(bloqueados)):
                             if bloqueados[x] == nome_tentativa:
                                 bloqueados[x] = ""
+                                print("Conta desbloqueada.")
                                 restaura = True
-
+                if restaura == False:
+                    print("Informações incorretas. Tente novamente.")
 
         case 5:
             break
