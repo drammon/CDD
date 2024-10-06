@@ -16,3 +16,4 @@ def contaVogais (txt):
         if i in "aeiou":
             vogais +=1
     print(vogais)
+def autenticaçãoLogin (tamanho):
