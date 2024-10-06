@@ -8,25 +8,25 @@ cpf = [""]*tamanho
 acesso = False
 
 tentativas = 3
-opcao = 0
+opcao = ""
 
-while opcao != 5:
-    opcao = int(input(" 1: Cadastro;\n 2: Log-in;\n 3: Mostrar todos os usuários, senhas e bloqueados;\n 4: Desbloquear conta;\n 5: Sair.\n\n Escolha: "))
+while opcao != "5":
+    opcao = input(" 1: Cadastro;\n 2: Log-in;\n 3: Mostrar todos os usuários, senhas e bloqueados;\n 4: Desbloquear conta;\n 5: Sair.\n\n Escolha: ")
 
     match opcao:
-        case 1:
+        case "1":
             for i in range(tamanho):
                 nomes[i] = input(f"Cadastre o nome do {i + 1}º usuário: ")
                 senhas[i] = input(f"Cadastre a senha do {i + 1}º usuário: ")
                 cpf[i] = input(f"Informe o CPF do {i + 1}º usuário (apenas números): ")
 
-        case 2:
+        case "2":
 
             while tentativas > 0:
                 nome_tentativa = input("Insira seu nome de usuário: ")
 
                 if nome_tentativa in bloqueados:
-                    print("Sua conta está bloqueada. Acesse o item 4 para desbloquear sua conta.")
+                    print("Sua conta está bloqueada. Acesse o item 4 para desbloqueá-la.")
                     break
 
                 if nome_tentativa not in nomes:
@@ -59,13 +59,13 @@ while opcao != 5:
                     acesso = False
                     break
 
-        case 3:
+        case "3":
             print(nomes, senhas, cpf)
             print(bloqueados)
             for i in range(tamanho):
                 print(f" Nome: {nomes[i]}, Senha: {senhas[i]}, CPF: {cpf[i]}, Posição: {i}")
 
-        case 4:
+        case "4":
             restaura = False
 
             while restaura == False:
@@ -91,5 +91,5 @@ while opcao != 5:
                 if restaura == False:
                     print("Informações incorretas. Tente novamente.")
 
-        case 5:
+        case "5":
             break
