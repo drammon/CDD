@@ -20,8 +20,8 @@ def contaVogais (txt):
     print(vogais)
 def senhaValida (senha_tentativa):
 
-    caracteres_aceitos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~ "
-    caracteres_especiais = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~ "
+    caracteres_aceitos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,-./:;<=>?@^_|~ "
+    caracteres_especiais = "!#$%&()*+,-./:;<=>?@^_|~ "
     carac_invalidos = 0
     especiais_inseridos = 0
 

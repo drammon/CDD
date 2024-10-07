@@ -1,6 +1,6 @@
 import biblioteca
 
-tamanho = 5
+tamanho = 2
 bloqueados = []
 
 nomes = [""]*tamanho
@@ -28,9 +28,12 @@ while opcao != "5":
                         nomes[i] = nomes_tentativa
                     else:
                         print("Esse nome de usuário já está cadastrado.")
-                print("Requisitos de senha:\n - Maior ou igual a 8 caracteres; \n - Conter pelo menos 1 dos seguintes caracteres especiais: '!#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ';")
+                print("Requisitos de senha:\n - Maior ou igual a 8 caracteres; \n - Conter pelo menos 1 dos seguintes caracteres especiais: !#$%&()*+,-./:;<=>?@^_|~ ")
+
                 senha_tentativa1 = input(f"Cadastre a senha do {i + 1}º usuário: ")
+
                 verifica = biblioteca.senhaValida(senha_tentativa1)
+
                 while verifica == False:
                     senha_tentativa1 = input(f"Senha inválida! Verifique os requisitos de senha e tente novamente: ")
                     verifica = biblioteca.senhaValida(senha_tentativa1)
@@ -80,14 +83,14 @@ while opcao != "5":
 
                 if tentativas == 0:
                     print("Conta bloqueada!")
-                    bloqueados += nome_tentativa
+                    bloqueados.append(nome_tentativa)
                     tentativas = 3
                     acesso = False
                     break
 
         case "3":
-            print(nomes, senhas, cpf)
-            print(bloqueados)
+
+            print(f"Bloqueados: {bloqueados}")
             for i in range(tamanho):
                 print(f" Nome: {nomes[i]}, Senha: {senhas[i]}, CPF: {cpf[i]}, Posição: {i}")
 
@@ -99,7 +102,7 @@ while opcao != "5":
                 nome_tentativa = input("Insira seu nome de usuário: ")
 
                 if nome_tentativa not in nomes:
-                    print("Este usuário ainda não está cadastrado.")
+                    print("Este usuário ainda não está bloqueadi.")
                     break
 
                 cpf_tentativa = input("Insira seu CPF (apenas números): ")
