@@ -1,6 +1,6 @@
 import biblioteca
 
-tamanho = 3
+tamanho = 5
 bloqueados = []
 
 nomes = [""]*tamanho
