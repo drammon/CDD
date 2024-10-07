@@ -1,3 +1,5 @@
+import biblioteca
+
 tamanho = 3
 bloqueados = []
 
@@ -18,18 +20,31 @@ while opcao != "5":
             for i in range(tamanho):
                 usuario_existe = True
 
-                while usuario_existe == True:
+                while usuario_existe:
                     nomes_tentativa = input(f"Cadastre o nome do {i + 1}º usuário: ")
 
                     if nomes_tentativa not in nomes:
-
-                        nomes[i] = nomes_tentativa
                         usuario_existe = False
+                        nomes[i] = nomes_tentativa
                     else:
                         print("Esse nome de usuário já está cadastrado.")
+                print("Requisitos de senha:\n - Maior ou igual a 8 caracteres; \n - Conter pelo menos 1 dos seguintes caracteres especiais: '!#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ';")
+                senha_tentativa1 = input(f"Cadastre a senha do {i + 1}º usuário: ")
+                verifica = biblioteca.senhaValida(senha_tentativa1)
+                while verifica == False:
+                    senha_tentativa1 = input(f"Senha inválida! Verifique os requisitos de senha e tente novamente: ")
+                    verifica = biblioteca.senhaValida(senha_tentativa1)
 
-                senhas[i] = input(f"Cadastre a senha do {i + 1}º usuário: ")
+                senha_tentativa2 = input(f"Confirme a senha: ")
+
+                if verifica == True:
+                    while senha_tentativa1 != senha_tentativa2:
+                        senha_tentativa2 = input(f"As senhas estão diferentes! Verifique e tente novamente: ")
+                    senhas[i] = senha_tentativa1
+
+
                 cpf[i] = input(f"Informe o CPF do {i + 1}º usuário (apenas números): ")
+                print(f"O {i+1}º usuário  foi cadastrado com sucesso!")
 
         case "2":
 
